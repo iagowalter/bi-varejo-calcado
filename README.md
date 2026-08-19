@@ -4,6 +4,7 @@ Sistema de visualização de dados desenvolvido em Power BI para acompanhamento 
 
 ## 🔴 Acesso ao Dashboard
 **[Clique aqui para acessar o projeto interativo na web](https://app.powerbi.com/view?r=eyJrIjoiZmJjZGE5YjktZDY3ZC00OTgxLTgyNzEtYWVkZWVrZjViMGNjIiwidCI6ImRmN2Q2NTBkLWMxNmMtNDVhOC1hYjZhLTQwNTNhOGRkNDk5MCJ9)**
+
 *(Nota: Para fins de demonstração pública, os dados originais deste projeto foram anonimizados. Nomes de clientes e funcionários são totalmente fictícios e todos os valores financeiros foram multiplicados por um fator para modificar os montantes reais, preservando assim a privacidade dos clientes e o sigilo estratégico da empresa).*
 ---
 
