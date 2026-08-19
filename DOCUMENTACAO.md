@@ -20,7 +20,7 @@ O modelo foi otimizado utilizando o conceito de *Star Schema*, garantindo alta p
 
 ### Tabelas Dimensão
 * **`Dim_Clientes`**: Cadastro único de clientes. Inclui faixa etária, data de nascimento (tratada para remoção de anomalias), endereço e contato. *(Nota: Contém o agrupamento "Consumidor Final" para vendas não identificadas).*
-* **`Dim_Funcionarios`** *(Vendedoras)*: Cadastro da equipe de vendas. Filtra ativamente logins de sistema (E-commerce, Caixas genéricos) mapeando-os para "Vendedor Desconhecido" nas Fatos.
+* **`Dim_Funcionarios`** *(Vendedoras)*: Cadastro da equipe de vendas, responsáveis pelos atendimentos em loja.
 * **`Dim_Produtos`**: Hierarquia de mercadorias contendo Marca, Categoria (Sapato, Tênis, Sandália) e Tamanho.
 * **`Dim_Lojas`**: Identificação das filiais/matriz físicas e virtuais.
 * **`Dim_Calendario`**: Tabela de inteligência de tempo contendo Ano, Mês, Dia, Trimestre e Dia da Semana, essencial para funções de inteligência temporal (Sazonalidade).
@@ -30,7 +30,7 @@ O modelo foi otimizado utilizando o conceito de *Star Schema*, garantindo alta p
 ## ⚙️ 3. Etapas de ETL e Tratamento (Power Query)
 As principais transformações realizadas no Power Query (Linguagem M) para garantir a governança e limpeza dos dados:
 1. **Conexão e Empilhamento:** Leitura e combinação (*Append*) de múltiplos arquivos `.csv` e consolidação em tabelas únicas.
-2. **Remoção de Colunas Inúteis:** Exclusão de colunas residuais geradas por falhas na exportação do ERP (ex: `Unnamed: 17`).
+2. **Seleção Estrita de Colunas:** Utilização da função `Table.SelectColumns` para esmagar colunas fantasmas geradas pela extração e blindar o modelo de dados.
 3. **Tratamento de Tipagem:** Conversão rigorosa de textos para Moeda (`Currency.Type`), Números Inteiros (`Int64.Type`) e Datas.
 4. **Limpeza de Nomes e Prefixos:** Remoção de sujeiras nos textos (ex: "DR.", "SRA.") para padronização.
 5. **Tratamento de Exceções (Erros de Idade):** Identificação e substituição de datas de nascimento nulas ou implausíveis para manter a coerência dos gráficos demográficos.

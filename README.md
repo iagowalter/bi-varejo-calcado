@@ -31,19 +31,19 @@ O painel permite responder a perguntas de negócio como:
 ## 📸 Telas do Projeto
 
 ### Performance de Vendas
-![Performance de Vendas](imagens/performance_vendas.png)
+![Performance de Vendas](Imagens/performance_vendas.png)
 
 ### Análise de Clientes
-![Análise de Clientes](imagens/analise_clientes.png)
+![Análise de Clientes](Imagens/analise_clientes.png)
 
 ### Análise de Produtos
-![Análise de Produtos](imagens/analise_produtos.png)
+![Análise de Produtos](Imagens/analise_produtos.png)
 
 ### Gestão de Vendedoras
-![Gestão de Vendedoras](imagens/analise_vendedoras.png)
+![Gestão de Vendedoras](Imagens/analise_vendedoras.png)
 
 ### Estoque
-![Estoque](imagens/estoque.png)
+![Estoque](Imagens/estoque.png)
 
 ---
 
@@ -72,15 +72,15 @@ Ferramenta utilizada para a modelagem relacional (*Star Schema*) e desenvolvimen
 2. **Transformação (ETL):** O Power Query conecta-se à nuvem, extrai os arquivos e realiza as devidas limpezas e formatações.
 
    *(Exemplo do tratamento de dados no Power Query)*
-   ![Power Query - Dim_Produtos](imagens/dim_produtos.png)
+   ![Power Query - Dim_Produtos](Imagens/dim_produtos.png)
 
 3. **Modelagem:** Criação do modelo relacional (*Star Schema*) dividindo as informações em tabelas Fato (Vendas, Pagamentos) e Dimensão (Clientes, Produtos, Vendedores, Calendário).
 
    *(Estrutura de Relacionamentos do Modelo)*
-   ![Modelo Relacional](imagens/relacionamentos.png)
+   ![Modelo Relacional](Imagens/relacionamentos.png)
 
    *(Tabela Auxiliar de Calendário criada com DAX)*
-   ![Dim_Calendario](imagens/calendario.png)
+   ![Dim_Calendario](Imagens/calendario.png)
 
 4. **Visualização:** Aplicação de regras de negócio, desenvolvimento do layout e configuração de filtros visuais (ocultando dados residuais como registros sem cadastro) para garantir a consistência das análises.
 5. **Automação:** Configuração de *Scheduled Refresh* (Atualização Agendada) no Power BI Service, garantindo que os diretores tenham os KPIs atualizados diariamente de forma automática, assim que novos arquivos CSVs são inseridos na nuvem.
